@@ -33,4 +33,5 @@ RUN make VERBOSE=1
 RUN chmod +x /app/run_llama.sh
 
 # デフォルトコマンドを修正し、llama-cliを実行
-CMD ["/app/run_llama.sh"]
+# スクリプトを絶対パスで実行
+CMD ["/bin/bash", "/app/run_llama.sh"]
